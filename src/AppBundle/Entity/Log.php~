@@ -1,0 +1,195 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Log
+ *
+ * @ORM\Table(name="log")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\LogRepository")
+ */
+class Log
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="timeStamp", type="datetime")
+     */
+    private $timeStamp;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="power1", type="float")
+     */
+    private $power1;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="power2", type="float")
+     */
+    private $power2;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="power3", type="float")
+     */
+    private $power3;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="powerlimit", type="float")
+     */
+    private $powerlimit;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="totalpower", type="float")
+     */
+    private $totalpower;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set timeStamp
+     *
+     * @param \DateTime $timeStamp
+     *
+     * @return Log
+     */
+    public function setTimeStamp($timeStamp)
+    {
+        $this->timeStamp = $timeStamp;
+
+        return $this;
+    }
+
+    /**
+     * Get timeStamp
+     *
+     * @return \DateTime
+     */
+    public function getTimeStamp()
+    {
+        return $this->timeStamp;
+    }
+
+    /**
+     * Set power1
+     *
+     * @param float $power1
+     *
+     * @return Log
+     */
+    public function setPower1($power1)
+    {
+        $this->power1 = $power1;
+
+        return $this;
+    }
+
+    /**
+     * Get power1
+     *
+     * @return float
+     */
+    public function getPower1()
+    {
+        return $this->power1;
+    }
+
+    /**
+     * Set power2
+     *
+     * @param float $power2
+     *
+     * @return Log
+     */
+    public function setPower2($power2)
+    {
+        $this->power2 = $power2;
+
+        return $this;
+    }
+
+    /**
+     * Get power2
+     *
+     * @return float
+     */
+    public function getPower2()
+    {
+        return $this->power2;
+    }
+
+    /**
+     * Set power3
+     *
+     * @param float $power3
+     *
+     * @return Log
+     */
+    public function setPower3($power3)
+    {
+        $this->power3 = $power3;
+
+        return $this;
+    }
+
+    /**
+     * Get power3
+     *
+     * @return float
+     */
+    public function getPower3()
+    {
+        return $this->power3;
+    }
+
+    /**
+     * Set powerlimit
+     *
+     * @param float $powerlimit
+     *
+     * @return Log
+     */
+    public function setPowerlimit($powerlimit)
+    {
+        $this->powerlimit = $powerlimit;
+
+        return $this;
+    }
+
+    /**
+     * Get powerlimit
+     *
+     * @return float
+     */
+    public function getPowerlimit()
+    {
+        return $this->powerlimit;
+    }
+}
